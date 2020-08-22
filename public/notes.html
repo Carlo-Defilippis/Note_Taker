@@ -47,6 +47,9 @@ $(".new-note").on("click", function(notes) {
   let textTitleData = $(".note-title").val();
   let textAreaData = $(".note-textarea").val();
   console.log("Title ",textTitleData, "Area ",textAreaData);
+  function addData(textTitleData, textAreaData) {
+    fs.writeFile("../db/db.json", )
+  }
 });
 
 
