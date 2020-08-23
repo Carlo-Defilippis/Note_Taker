@@ -21,7 +21,7 @@ app.get("/notes", function (req, res) {
 });
 
 app.get("/api/notes/", function (req, res) {
-  console.log("getting note");
+  console.log("getting the note");
   res.json(noteData);
 });
 
@@ -38,7 +38,7 @@ app.post("/api/notes", function (req, res) {
 
   fs.writeFile("./db/db.json", JSON.stringify(noteData), function (err) {
     if (err) throw err;
-    console.log("sucessful write");
+    console.log("sucessfully wrote");
   });
 });
 
@@ -48,11 +48,11 @@ app.delete("/api/notes/:id", function (req, res) {
   console.log(deleteNote);
   fs.writeFile("./db/db.json", JSON.stringify(deleteNote), function (err) {
     if (err) throw err;
-    console.log("sucessful delete");
+    console.log("deleted succesfully");
   });
   noteData = deleteNote;
   res.json(deleteNote);
-  console.log("delete post"); 
+  console.log("deleted post"); 
 });
 
 app.listen(PORT, function () {
